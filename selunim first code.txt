@@ -1,0 +1,27 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class testwebpage {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//create firefox Driver
+		WebDriver driver = new FirefoxDriver();	
+		
+		//open web page
+		driver.get("http://www.google.com");
+		
+		//find what field and enter selenium
+		driver.findElement(By.id("lst-ib")).sendKeys("selenium");
+		
+		//find location 
+		driver.findElement(By.id("lst-ib")).clear();
+		driver.findElement(By.id("lst-ib")).sendKeys("uditha");
+		
+		//search button
+		driver.findElement(By.id("sblsbb")).click();;
+	}
+
+}
